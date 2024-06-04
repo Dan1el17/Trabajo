@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int n1, n2;
+
+    printf("Calcular el MCD de dos numeros\n"); // Programa que se va a realizar
+    printf("Ingrese el primer numero: "); // Pedimos que ingrese un numero al azar
+    scanf("%d", &n1); // Almacenamos el rpimero numero
+    printf("Ingrese el segundo numero: "); // Pedimos que ingrese el segundo numero
+    scanf("%d", &n2); // Almacenamos el segundo numero
+
+    int mcd = 1; // Contador 
+   
+    for (int i = 1; i <= n1 && i <= n2; ++i) {
+        if (n1 % i == 0 && n2 % i == 0) {
+            mcd = i;
+        }
+    }
+
+    printf("El MCD entre %d y %d es: %d\n", n1, n2, mcd); // Imprimimos cual es el MCD de dos numeros 
+
+    return 0;
+}
